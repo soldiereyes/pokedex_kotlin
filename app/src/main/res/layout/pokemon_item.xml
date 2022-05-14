@@ -1,99 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:layout_editor_absoluteX="37dp"
-    tools:layout_editor_absoluteY="179dp">
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/ivPokemon"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/charmander"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:layout_constraintBottom_toTopOf="@+id/ivPokemon"
-        app:layout_constraintEnd_toStartOf="@+id/ivPokemon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvNumber"
-        android:layout_width="40dp"
-        android:layout_height="20dp"
-        android:textColor="@color/grey"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints,TextContrastCheck"
-        tools:layout_editor_absoluteY="224dp"
-        tools:text="N 001" />
-
-    <TextView
-        android:id="@+id/tvName"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#313131"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="252dp"
-        tools:text="Charmander" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvName">
 
+        <ImageView
+            android:id="@+id/ivPokemon"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/image_name"
+            android:src="@drawable/charmander"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toTopOf="@+id/ivPokemon"
+            app:layout_constraintEnd_toStartOf="@+id/ivPokemon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tvType1"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:background="@color/orange"
-            android:gravity="center_horizontal"
-            android:text="@string/button_name"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="12sp"
+            android:id="@+id/tvNumber"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints,TextContrastCheck"
-            tools:layout_editor_absoluteX="69dp"
-            tools:layout_editor_absoluteY="296dp" />
+            tools:layout_editor_absoluteY="224dp"
+            tools:text="N 001" />
 
         <TextView
-            android:id="@+id/tvType2"
-            android:layout_width="130dp"
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:background="@color/orange"
-            android:gravity="center_horizontal"
-            android:text="@string/button_name"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="12sp"
-            tools:ignore="MissingConstraints,TextContrastCheck"
-            tools:layout_editor_absoluteX="69dp"
-            tools:layout_editor_absoluteY="296dp" />
+            android:textColor="#313131"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="252dp"
+            tools:text="Charmander" />
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvName">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/tvType1"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:background="@color/orange"
+                android:gravity="center_horizontal"
+                android:text="@string/button_name"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:ignore="MissingConstraints,TextContrastCheck"
+                tools:layout_editor_absoluteX="69dp"
+                tools:layout_editor_absoluteY="296dp" />
+
+            <TextView
+                android:id="@+id/tvType2"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@color/orange"
+                android:gravity="center_horizontal"
+                android:text="@string/button_name"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:ignore="MissingConstraints,TextContrastCheck"
+                tools:layout_editor_absoluteX="69dp"
+                tools:layout_editor_absoluteY="296dp" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
